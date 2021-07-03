@@ -63,8 +63,8 @@
         </tr>
         <?php endforeach; ?>
     </table>
-            <a href="" class="btn btn-primary btn-sn">Download-PDF</a>
     
+    <a href="pdf-saida/index.php" class="btn btn-danger btn-sn">Download-PDF</a>
 </div>
 <script type="text/javascript" src="assets/js/bootstrap1.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
