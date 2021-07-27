@@ -34,7 +34,7 @@
             </nav>
       </div><br><br><br><br>
     <div class="container">
-    <form method="post" action="assets/dataBase/inserirEnt.php">
+    <form method="post" action="inserirEnt.php">
         <div class="mb-3">
             <input type="text" name="nome" placeholder="Onde Comprou..." class="form-control">
         </div>

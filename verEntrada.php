@@ -62,7 +62,6 @@ require 'assets/dataBase/config.php';
           </tr>
           <?php endforeach; ?>
        </table>
-       <a href="pdf-entrada/index.php" class="btn btn-danger btn-sn">Download-PDF</a>
     </div>
 <script type="text/javascript" src="assets/js/bootstrap1.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>

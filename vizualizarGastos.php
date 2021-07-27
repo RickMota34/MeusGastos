@@ -1,11 +1,9 @@
 <?php
     require 'assets/dataBase/config.php';
-   
-    $lista = [];
-    $sql = $pdo->query("SELECT * FROM saidas ORDER BY dia DESC");
-    if($sql->rowCount() > 0 ){
-        $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
-    }
+    require_once '../controle1/dao/contasMysql.php';
+    $contasDao = new contasMysql($pdo);
+
+   $lista = $contasDao->vizualisar();
 ?>  
 <!DOCTYPE html>
 <html lang="pt">
@@ -51,14 +49,15 @@
             <th>Valor</td>
             <th>opções</th>
         </tr>
+        
         <?php foreach($lista as $item):?>
         <tr>
-            <td><?=$item['nome'];?></td>
-            <td><?=date('d/m/y', strtotime($item['dia']));?></td>
-            <td><?=$item['valor'];?></td>
+            <td><?=$item->getNome();?></td>
+            <td><?=date('d/m/y', strtotime($item->getDia()));?></td>
+            <td><?=$item->getValor();?></td>
             <td>
-            <a href="editarSaida.php?id=<?=$item['id'];?>" class="btn btn-primary btn-sm">Editar</a>
-            <a href="excluirSai.php?id=<?=$item['id'];?>" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+            <a href="editarSaida.php?id=<?=$item->getId();?>" class="btn btn-primary btn-sm">Editar</a>
+            <a href="excluirSai.php?id=<?=$item->getId();?>" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
             </td>
         </tr>
         <?php endforeach; ?>

@@ -38,6 +38,14 @@
       </div><br><br><br><br>
     <div class="container"><br>
        <form action="assets/dataBase/inserir.php" method="post">
+       <div class="mb-3">
+          <select class="form-select" arial-label="Default Select example" name="" id="">
+             <option value="">Forma de Pagamento</option>
+             <option value="">Dinheiro</option>
+             <option value="">Cartão Deb. Berna</option>
+             <option value="">Cartão Crédito</option>
+          </select>
+       </div>
          
        <div class="mb-3">
              <input type="text" name="origem" placeholder="Origem do Dinheiro" class="form-control">
